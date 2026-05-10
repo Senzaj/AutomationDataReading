@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Records>
+    <Record>
+        <Title>Server Update</Title>
+        <Category>Infrastructure</Category>
+        <CreatedAt>2026-05-01</CreatedAt>
+    </Record>
+    <Record>
+        <Title>Employee Audit</Title>
+        <Category>HR</Category>
+        <CreatedAt>2026-05-02</CreatedAt>
+    </Record>
+    <Record>
+        <Title>Budget Review</Title>
+        <Category>Finance</Category>
+        <CreatedAt>2026-05-03</CreatedAt>
+    </Record>
+    <Record>
+        <Title>Bug Investigation</Title>
+        <Category>IT</Category>
+        <CreatedAt>2026-05-04</CreatedAt>
+    </Record>
+</Records>
