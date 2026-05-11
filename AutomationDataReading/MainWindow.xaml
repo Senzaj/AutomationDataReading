@@ -18,12 +18,23 @@
                 <TextBlock>Hours</TextBlock>
                 <TextBlock>Date</TextBlock>
             </ComboBox>
-            <DataGrid Name="RecordsGrid" AutoGenerateColumns="False" Width="400" HorizontalAlignment="Left" Margin="10 10 0 0">
+            <DataGrid Name="ExelRecordsGrid" AutoGenerateColumns="False" Width="400" HorizontalAlignment="Left" Margin="10 10 0 0" Visibility="Collapsed">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header = "Name" Binding="{Binding Name}"/>
                     <DataGridTextColumn Header = "Department" Binding="{Binding Department}"/>
                     <DataGridTextColumn Header = "Worked in hours" Binding="{Binding Hours}"/>
                     <DataGridTextColumn Header = "Date" Binding="{Binding Date}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="XmlRecordsGrid" AutoGenerateColumns="False" Width="400" HorizontalAlignment="Left" Margin="10 10 0 0" Visibility="Collapsed">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "Title" Binding="{Binding Title}"/>
+                    <DataGridTextColumn Header = "Category" Binding="{Binding Category}"/>
+                    <DataGridTextColumn Header = "Created at" Binding="{Binding CreatedAt}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="SqlRecordsGrid" AutoGenerateColumns="False" Width="400" HorizontalAlignment="Left" Margin="10 10 0 0" Visibility="Collapsed">
+                <DataGrid.Columns>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

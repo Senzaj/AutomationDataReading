@@ -30,3 +30,4 @@ D:\rep\AutomationDataReading\AutomationDataReading\bin\Debug\net10.0-windows\RBu
 D:\rep\AutomationDataReading\AutomationDataReading\bin\Debug\net10.0-windows\SixLabors.Fonts.dll
 D:\rep\AutomationDataReading\AutomationDataReading\obj\Debug\net10.0-windows\AutomationDataReading.csproj.AssemblyReference.cache
 D:\rep\AutomationDataReading\AutomationDataReading\obj\Debug\net10.0-windows\Automati.EF6A9978.Up2Date
+D:\rep\AutomationDataReading\AutomationDataReading\obj\Debug\net10.0-windows\AutomationDataReading.sourcelink.json

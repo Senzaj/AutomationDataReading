@@ -27,13 +27,15 @@ public partial class MainWindow : Window
     private async void loadExcel_OnClick(object sender, RoutedEventArgs e)
     {
         var records = await _excelReader.GetList();
-        RecordsGrid.ItemsSource = records;
+        ExelRecordsGrid.ItemsSource = records;
+        SwitchTable(SourceType.Excel);
     }
 
     private async void LoadXml_OnClick(object sender, RoutedEventArgs e)
     {
         var records = await _xmlReader.GetList();
-        
+        XmlRecordsGrid.ItemsSource = records;
+        SwitchTable(SourceType.Xml);
     }
 
     private void LoadSql_OnClick(object sender, RoutedEventArgs e)
@@ -51,5 +53,29 @@ public partial class MainWindow : Window
     {
         var comboBox = (ComboBox)sender;
         
+    }
+
+    private void SwitchTable(SourceType tableType)
+    {
+        switch (tableType)
+        {
+            case SourceType.Excel:
+                ExelRecordsGrid.Visibility = Visibility.Visible;
+                XmlRecordsGrid.Visibility = Visibility.Collapsed;
+                SqlRecordsGrid.Visibility = Visibility.Collapsed;
+                break;
+            case SourceType.Xml:
+                XmlRecordsGrid.Visibility = Visibility.Visible;
+                ExelRecordsGrid.Visibility = Visibility.Collapsed;
+                SqlRecordsGrid.Visibility = Visibility.Collapsed;
+                break;
+            case SourceType.Sql:
+                SqlRecordsGrid.Visibility = Visibility.Visible;
+                ExelRecordsGrid.Visibility = Visibility.Collapsed;
+                XmlRecordsGrid.Visibility = Visibility.Collapsed;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(tableType), tableType, null);
+        }
     }
 }

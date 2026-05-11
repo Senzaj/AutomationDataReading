@@ -32,9 +32,9 @@ public class XmlService: IXmlReader<ActionRecord>
     {
         return new ActionRecord
         {
-            Name = element.Element("Name")?.Value,
-            Category = element.Element("Category")?.Value,
-            CreatedAt =  DateTime.Parse(element.Element("CreatedAt")?.Value),
+            Title = element.Element("Title").Value,
+            Category = element.Element("Category").Value,
+            CreatedAt =  DateTime.Parse(element.Element("CreatedAt").Value),
             Source = SourceType.Xml
         };
     }
