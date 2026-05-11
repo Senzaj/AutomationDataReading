@@ -1,4 +1,5 @@
 ﻿using AutomationDataReading.Models;
+using AutomationDataReading.Models.Excel;
 using AutomationDataReading.Services.Interfaces;
 using ClosedXML.Excel;
 

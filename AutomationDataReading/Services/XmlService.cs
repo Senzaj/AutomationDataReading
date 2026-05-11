@@ -1,5 +1,6 @@
 ﻿using System.Xml.Linq;
 using AutomationDataReading.Models;
+using AutomationDataReading.Models.Xml;
 using AutomationDataReading.Services.Interfaces;
 
 namespace AutomationDataReading.Services;

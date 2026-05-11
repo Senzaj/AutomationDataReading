@@ -9,6 +9,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AutomationDataReading.Models;
+using AutomationDataReading.Models.Excel;
+using AutomationDataReading.Models.Xml;
 using AutomationDataReading.Services;
 using AutomationDataReading.Services.Interfaces;
 

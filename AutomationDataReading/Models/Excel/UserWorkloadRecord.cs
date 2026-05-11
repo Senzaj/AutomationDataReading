@@ -1,4 +1,4 @@
-﻿namespace AutomationDataReading.Models;
+﻿namespace AutomationDataReading.Models.Excel;
 
 public class UserWorkloadRecord
 {
