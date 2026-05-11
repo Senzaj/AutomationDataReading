@@ -33,9 +33,7 @@
                     <DataGridTextColumn Header = "Created at" Binding="{Binding CreatedAt}"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid Name="SqlRecordsGrid" AutoGenerateColumns="False" Width="400" HorizontalAlignment="Left" Margin="10 10 0 0" Visibility="Collapsed">
-                <DataGrid.Columns>
-                </DataGrid.Columns>
+            <DataGrid Name="SqlRecordsGrid" AutoGenerateColumns="True" Width="400" HorizontalAlignment="Left" Margin="10 10 0 0" Visibility="Collapsed">
             </DataGrid>
         </StackPanel>
     </Grid>

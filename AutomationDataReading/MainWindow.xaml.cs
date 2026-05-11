@@ -1,15 +1,8 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using AutomationDataReading.Models;
 using AutomationDataReading.Models.Excel;
+using AutomationDataReading.Models.Sql;
 using AutomationDataReading.Models.Xml;
 using AutomationDataReading.Services;
 using AutomationDataReading.Services.Interfaces;
@@ -20,6 +13,7 @@ public partial class MainWindow : Window
 {
     private readonly IExcelReader<UserWorkloadRecord> _excelReader = new ExcelService();
     private readonly IXmlReader<ActionRecord> _xmlReader = new XmlService();
+    private readonly ISqlReader<ProfileRecord> _sqlProfilesReader = new SqlService();
     
     public MainWindow()
     {
@@ -40,9 +34,11 @@ public partial class MainWindow : Window
         SwitchTable(SourceType.Xml);
     }
 
-    private void LoadSql_OnClick(object sender, RoutedEventArgs e)
+    private async void LoadSql_OnClick(object sender, RoutedEventArgs e)
     {
-        MessageBox.Show("load_sql");
+        var records = await _sqlProfilesReader.GetList();
+        SqlRecordsGrid.ItemsSource = records;
+        SwitchTable(SourceType.Sql);
     }
 
     private void SearchField_OnTextChanged(object sender, TextChangedEventArgs e)
